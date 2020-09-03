@@ -1,0 +1,34 @@
+.buttonsList__container{
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+    .buttonList{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto 10px;
+        background-color: #fff;
+        padding: 10px 15px;
+        border-radius: 6px;
+        span{
+            display: inline-block;
+            width: 90%;
+            margin-left: 5px;
+            text-align: left;
+
+            font-size: $font-p;
+            color: $negro-57;
+        }
+        img{
+            display: inline-block;
+            &:first-of-type{
+                width: 40px;
+            }
+            &:last-of-type{
+                width: 8px;
+            }
+        }
+    }
+}

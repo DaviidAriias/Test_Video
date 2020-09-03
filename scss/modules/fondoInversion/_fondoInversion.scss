@@ -1,0 +1,497 @@
+.acordion{
+    background: linear-gradient(to top, rgba(4,4,4,0), rgba(4,4,4,1)), url(../images/FONDOSRIESGOBAJO.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 78px;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+    margin-bottom: 20px;
+    background-position: 50%;
+    margin-top: 15px;
+
+    &.bordeRadiosDespli{
+        border-radius: 5px 5px 0 0;
+    }
+
+    &:first-child{
+        margin-top: 0;
+    }
+
+    &__par{
+        @include prefix((
+            display: flex,
+            align-items: center,
+            justify-content: space-between,
+            ), webkit moz ms);
+        width: 66%;
+
+        .maxWidth{
+            width: 48%;
+        }
+    }
+
+    .acordion__contenido{
+        width: 100%;
+        @include prefix((
+        display: flex,
+        align-items: center,
+        justify-content: space-between,
+        ), webkit moz ms);
+
+        span{
+            font-size: $font-p - 2;
+            color: $blanco-ff;
+
+            &.circulo-color {
+                position: relative;
+
+                &.light{
+                    line-height: 1.1;
+                }
+
+                &::before{
+                    content: '';
+                    border-radius: 50%;
+                    background-color: #8CD504;
+                    height: 12px;
+                    width: 12px;
+                    position: absolute;
+                    margin: 0 auto;
+                    top: 0;
+                    left: 35%;
+                }
+            }
+        }
+
+        &--boton{
+            width: 96px;
+            margin: 0 auto;
+            height: 18px;
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 114px;
+            background-color: $blanco-ff;
+            padding:2px 8px;
+            font-weight: 400;
+            justify-content: space-around;
+            box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.26);
+
+            .imgBoton {
+                margin-right: 5px;
+                transform: rotateZ(180deg);
+                transition: transform 0.4s;
+            }
+
+            span{
+                color: $negro-57;
+                font-size: $font-p - 4;
+                
+            }
+        }
+    }
+
+    &--segundoFondo{
+        background: linear-gradient(to top, rgba(4,4,4,0), rgba(4,4,4,1)), url(../images/FONDOSRIESGOMEDIO.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50%;
+
+        //cambio de color 
+        .acordion__contenido{
+
+            span.circulo-color{
+    
+                &::before{
+                    background-color: #FFD800; 
+                }
+            }
+        }
+
+    }
+
+    &--terceroFondo{
+        background: linear-gradient(to top, rgba(4,4,4,0), rgba(4,4,4,1)), url(../images/FONDOSRIESGOMEDIO-ALTO.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50%;
+
+         //cambio de color 
+         .acordion__contenido{
+
+            span.circulo-color{
+    
+                &::before{
+                    background-color: #FF9D00; 
+                }
+            }
+        }
+    }
+
+    &--cuartoFondo{
+        background: linear-gradient(to top, rgba(4,4,4,0), rgba(4,4,4,1)), url(../images/FONDOSRIESGOALTO.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50%;
+
+        //cambio de color 
+        .acordion__contenido{
+
+            span.circulo-color{
+    
+                &::before{
+                    background-color: #FF0027; 
+                }
+            }
+        }
+    }
+   
+    &.activo {
+        margin-bottom: 0;
+        border-radius: 5px 5px 0 0;
+
+        .acordion__contenido{
+            &--boton{
+                .imgBoton{
+                    transform: rotateZ(0deg);
+                }
+            }
+        }
+    }
+
+}
+
+
+//contendedor de los acordiones 
+
+.contentCards{
+    background-color: $blanco-f8;
+    border-radius: 0 0 10px 10px;
+    height: auto;
+    max-height: 0;
+    overflow: hidden;
+    
+    &__content {
+        padding: 25px 10px;
+    }
+
+    .contenedor{
+        margin-bottom: 53px;
+
+        &:last-child{
+            margin-bottom: 35px;
+        }
+    
+        .optionCardOut{
+    
+            &__info{
+                width: 100%;     
+                height: 189px;  
+                @include prefix((
+                    display: flex,
+                    align-items: end,
+                    justify-content: space-between,
+                    ), webkit moz ms);
+            }
+    
+            &__imagen{
+                background-image: url("../images/SUPERIOR.jpg");
+                height: 100%;
+                border-radius: 5px 0 0 5px;
+                width: 45%;
+                clip-path: ellipse(80% 96% at 17% 50%);
+                background-position: 60% 50%;
+                background-size: cover;
+
+                @media only screen and (max-width: 320px) {
+                    width: 40%;
+                }
+
+                &--segundo{
+                    background-image: url("../images/INTERES.jpg");
+                }
+    
+                &--tercero{
+                    background-image: url("../images/MULTIESCALA.jpg");
+                    background-position: 20% 50%;
+                }
+                
+                //modulo riesgo Medio
+
+                &--cuarto{
+                    background-image: url("../images/DAVIPLUS-RENTA-FIJA-PESOS.jpg");
+                }
+                &--quinto{
+                    background-image: url("../images/RENTAFIJALARGOPLAZO.jpg");
+                }
+
+                //modulo riesgo Medio - Alto
+
+                &--sexto{
+                    background-image: url("../images/BALANCEADO_ACTIVO.jpg");
+                    background-position: 48% 50%;
+                    position: relative;
+
+                    &::before{
+                        content: url("../images/Riesgo-medio.svg");
+                        position: absolute;
+                        top: -1px;
+                        left: -1px;
+                        width: 80px;
+                        height: 23px;
+
+                        @media only screen and (max-width: 414px){
+                            width: 58px;
+                        }
+                    }
+                }
+    
+                &--septimo{
+                    background-image: url("../images/BALANCEADOGLOBAL.jpg");
+                    &::before{
+                        content: url("../images/Riesgo-alto.svg");
+                        position: absolute;
+                        top: -1px;
+                        left: -1px;
+                        width: 80px;
+                        height: 23px;
+                        @media only screen and (max-width: 414px){
+                            width: 58px;
+                        }
+                        
+                    }
+                }
+                &--obtavo{
+                    background-image: url("../images/SEGURIDADBOLIVAR.jpg");
+                    &::before{
+                        content: url("../images/Riesgo-alto.svg");
+                        position: absolute;
+                        top: -1px;
+                        left: -1px;
+                        width: 80px;
+                        height: 23px;
+                        @media only screen and (max-width: 414px){
+                            width: 58px;
+                        }
+                        
+                    }
+                }
+
+                //modulo riesgo Alto
+
+                &--noveno{
+                    background-image: url("../images/ACCION.jpg");
+                }
+            }
+    
+            &__encabezado{
+                width: 100%;
+    
+                .listado{
+                    margin-top: 11px;
+                    padding-left: 8px;
+                    padding-right: 8px;
+
+    
+                    &__item{
+                        @include prefix((
+                        display: flex,
+                        align-items: end,
+                        justify-content: center,
+                        ), webkit moz ms);
+                        font-size: $font-p - 3;
+                        color: $negro-6A;
+                        width: 100%;
+                        position: relative;
+                        text-align: left;
+                        margin-bottom: 9px;
+
+                        @media only screen and (max-width: 320px) {
+                            font-size: $font-p - 4;
+                        }
+    
+                        &:first-child{
+                            margin-top: 32px;
+
+                            @media only screen and (max-width: 320px) {
+                                margin-top: 37px;
+                            }
+                
+                        }
+    
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            transform: rotate(90deg);
+                            background-image: url('../images/icon-fd-arrowligth.svg');
+                            width: 7px;
+                            height: 4px;
+                            top: 6px;
+                        }
+                    }
+    
+                    &__parrafo{
+                        width: 100%;
+                        padding-left: 13px;
+                        line-height: 1.1;
+                    }
+                }
+      
+                .encabezado{
+    
+                    &__grisOscuro{
+                        background-color: $negro-d9;
+                        height: 29px;
+                        @include prefix((
+                            display: flex,
+                            align-items: center,
+                            justify-content: space-between,
+                            ), webkit moz ms);
+                        border-radius: 0 5px 0 5px;
+                        padding: 5px 20px;
+                        width: 100%;
+
+                        @media only  screen  and (max-width: 375px){
+                            padding: 5px 14px;
+                        }
+
+                        .minregular{
+                            font-size: $font-p - 1.5;
+                            color: $blanco-ff;
+                            font-weight: 600;
+                            text-align: left;
+
+                            @media only  screen  and (max-width: 320px){
+                                line-height: 1;
+                                font-size: $font-p - 3;
+                            }
+                            
+                        }
+
+                        .ligth {
+                            line-height: 1;
+                            font-size: $font-p - 4;
+                            color: $blanco-ff;
+                            font-weight: 400;
+                        }
+
+                        .rigth{
+                            text-align: right;
+                            width: 33%;
+
+                            @media only  screen  and (max-width: 320px){
+                                width: 44%;
+                            }
+                        }
+
+    
+                        span{
+                            color: $blanco-ff;
+                            font-weight: 600;
+                            font-size: $font-p - 2;
+                            text-align: left;
+
+                            @media only  screen  and (max-width: 320px){
+                                font-size: $font-p - 3;
+                            }
+
+                            @media only  screen  and (min-width: 575px){
+                                font-size: $font-p;
+                            }
+                        }
+                    }
+    
+                    &__grisClaro{
+                        background-color: $gris-dd;
+                        width: 95%;
+                        border-radius: 0 0 0 5px;
+                        float: right;
+                        padding: 3px 5px;
+                        @include prefix((
+                            display: flex,
+                            align-items: baseline,
+                            justify-content: end,
+                            ), webkit moz ms);
+
+                            @media only screen and (max-width: 320px){
+                                align-items: center
+                            }
+    
+                        span{
+                            font-size: $font-p - 4;
+                            font-weight: 400;
+                            margin-right: 5px;
+
+                            @media only  screen  and (min-width: 575px){
+                                font-size: $font-p - 3;
+                            }
+
+                            @media only screen and (max-width: 320px){
+                                width: 71%;
+                            }
+                        }
+                    }
+    
+                    
+            
+                }
+            }
+    
+            &__footer{
+                position: absolute;
+                bottom: -33px;
+                right: 0px;
+                @include prefix((
+                    display: flex,
+                    align-items: center,
+                    justify-content: space-between,
+                    ), webkit moz ms);
+                align-items: center;
+                background-color: #F3F3F3;
+                width: calc(96% - 11px);
+                z-index: 0;
+                height: 35px;
+                padding: 10px 15px;
+                border-radius: 0 0 5px 5px ;
+                box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.26);
+    
+                @media only screen and (max-width: 320px) {
+                    padding: 10px 10px;
+                }
+                @media only screen and (min-width: 514px) {
+                    justify-content: space-around;
+                }
+    
+                .optionCardOut__boton{
+                    font-size: $font-p - 3;
+                    color: #7B7B7B;
+                    text-decoration: underline;
+                    font-weight: 600;
+                    @include prefix((
+                        display: flex,
+                        align-items: center,
+                        ), webkit moz ms);
+    
+                    @media only screen and (max-width: 320px) {
+                        font-size: $font-p - 4;
+                    }
+    
+                    img{
+                        margin-right: 5px;
+                    }
+                }
+            }
+            
+        }
+        
+    }
+
+    &.expandido {
+        max-height: 1000px;
+    }
+}
+
+

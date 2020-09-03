@@ -1,0 +1,249 @@
+//Titulos genericos para todos los elementos
+h1, h2, h3, h4 {
+    display: inline-block;
+    width: 100%;
+    margin: 15px 0;
+    text-align: left;
+    font-family: $roboto;
+    font-size: $font-p;
+    font-weight: bold;
+    color: $negro-57;
+    //Clases usables en todos los elementos del corte
+    //.main -> De los titulos mas usados en toda la interface
+    &.main {
+        text-align: center;
+        font-size: $font-p + 2;
+    }
+
+    //Pensionados
+    &.big{
+        font-size: $font-h + 2;
+    }
+
+    //Pensionados
+    &.big22{
+        font-size: $font-h;
+    }
+    
+    //.light -> Fuente light
+    &.light {
+        font-weight: 100;
+    }
+    
+    &.lineUno{
+        line-height: 1.2;
+    }
+    
+    //.medium -> Fuente medium
+    &.medium{
+        font-weight: 500;
+    }
+    //.regular -> Fuente regular
+    &.regular {
+        font-weight: normal;
+    }
+    //.justify -> Justificar texto
+    &.justify {
+        text-align: justify;
+    }
+    //.short -> Width más angosto
+    &.short {
+        width: 65%;
+    }
+    &.noFullWidth{
+        width: 91%;
+    }
+    //.center -> Centrar el texto del titulo
+    &.center {
+        text-align: center;
+    }
+    //.noMrgnTop -> 0 de margen arriba
+    &.noMrgnTop{
+        margin-top: 0;
+    }
+
+    &.noMrgnTopmin{
+        margin-top: 5px;
+    }
+    //.noMrgnBottom -> 0 de margen abajo
+    &.noMrgnBottom{
+        margin-bottom: 0;
+    }
+
+    &.mrgBottomMax{
+        margin-bottom: 24px;
+    }
+    &.mrgTopMin{
+        margin-top: 15px;
+    }
+
+    &.mrgBottomMin{
+        margin-bottom: 15px;
+    }
+
+    &.mrgBottomSmall{
+        margin-bottom: 10px;
+    }
+
+    &.pdgduo{
+        padding:0 22px;
+    }
+    //.noMrgn -> 0 de margen arriba y abajo
+    &.noMrgn{
+        margin: 0;
+    }
+    //En caso de tener un titulo regular se incuye in Strong cuando sea necesario
+    strong{
+        font-weight: bold;
+    }
+    &.font-small{
+        font-size: $font-p - 3;
+    }
+
+    &.medio{
+        font-size: $font-p - 1;
+    }
+
+    &.font-medium{
+        font-size: $font-p - 1;
+    }
+    //color varia 
+    &.colorOpacity{
+        opacity: 60%;
+    }
+
+    &.font-medium{
+        font-size: $font-p + 4;
+    }
+
+    &.small{
+        font-size: $font-p - 2;
+    }
+
+    //Titulos vinculación formularios
+    &.headVinculation{
+        font-size: $font-h;
+        font-weight: bold;
+        text-align: center;
+        margin: 0 0;
+    }
+    &.subHeadVinculation{
+        font-size: $font-h - 2;
+        font-weight: 100;
+        text-align: center;
+        margin: 0 0;
+    }
+}
+
+
+/* Textos de ayuda helpers 10px - 14px | Generalmemnte van fuera de los boxes o
+en algunos casos dentro de los mismos */
+.contTextInformation{
+    display: inline-block;
+    max-width: 280px;
+    min-width: 255px;
+    text-align: center;
+    margin: 15px 0;
+    position: relative;
+
+    p{
+        font-size: $font-p - 2;
+        color: $negro-57;
+        strong{
+            font-weight: bold;
+        }
+        a{
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
+    &--mrgnTop{
+        margin-top: 15px;
+    }
+    &--mrgnBottom{
+        margin-bottom: 15px;
+    }
+    &--noMrgnTop{
+        margin-top: 0;
+    }
+    &--noMrgnBottom{
+        margin-bottom: 0;
+    }
+    &--big{
+        p{
+            font-size: $font-p;
+            strong{
+                font-size: $font-p;
+            }
+        }
+    }
+    &--fullWidth{
+        width: 100%;
+        max-width: inherit;
+    }
+}
+
+//Titulos usados solo para web
+.titlesHeader--Desktop{
+    display: none;
+    width: 90%;
+    margin: 25px auto;
+    h1{
+        font-size: $font-h + 4;
+        margin: 0;
+        color: $rojo;
+    }
+    h3{
+        font-size: $font-p + 4;
+        color: $negro-00;
+        margin: 0;
+        font-weight: bold;
+    }
+}
+
+//parafo
+.parrafo{
+    font-size: $font-p;
+    text-align: left;
+    color: $negro-57;
+    font-weight: 600;
+
+    &.medium{
+        font-weight: 500;
+    }
+
+    &.opacidad{
+        opacity: 80%;
+    }
+
+    &.smallBoton{
+        font-size: 10px;
+        font-weight: 400;
+    }
+
+    &.regular{
+        font-weight: 400;
+    }
+
+    &.center{
+        text-align: center;
+    }
+
+    &.blanco{
+        color: $blanco-ff;
+    }
+    &.line-height{
+        line-height: 15px;
+        padding-top: 3px;
+    }
+    &.mrgnTop{
+        margin-top: 15px;
+    }
+    &.mrgnBottom{
+        margin-bottom: 15px;
+    }
+    &.font-normal{
+        font-size: $font-p;
+    }
+
+}

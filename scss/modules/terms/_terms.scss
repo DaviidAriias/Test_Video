@@ -1,0 +1,15 @@
+//Terminos y Condiciones
+.container{
+    &--textTYC{
+        h2{
+            width: 100%;
+            text-align: center;
+            font-size: $font-p + 3;
+        }
+        p{
+            font-size: $font-p;
+            color: $negro-57;
+            text-align: justify;
+        }
+    }
+}

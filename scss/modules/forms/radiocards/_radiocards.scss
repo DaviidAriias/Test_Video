@@ -1,0 +1,199 @@
+.radio{
+    //Radiocards - Important!
+
+    &--optionCard{
+        @include prefix((
+            display: flex,
+            align-items: center,
+            justify-content: space-between
+        ), webkit moz ms);
+        width: 100%;
+        min-height: 85px;
+        margin: 0 auto;
+        float: none;
+        background-color: #fff;
+        box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.15);
+        padding: 15px 100px 15px 15px;
+        border-radius: 15px;
+        position: relative;
+        z-index: 9;
+
+        &.optionCard--semiRounded{
+            border-radius: 5px;
+
+            .optionCard__image{
+                border-radius: 5px;
+            }
+        }
+
+        &--toggle{
+            padding-bottom: 20px;
+            margin-bottom: 15px;
+        }
+
+        .radio__indicator{
+            position: relative;
+        }
+
+        .optionCard__info{
+            width: calc(100% - 25px);
+            display: inline-block;
+            padding-left: 10px;
+            text-align: left;
+            span{
+                display: inline-block;
+                width: 100%;
+                margin-bottom: 10px;
+                font-size: $font-p - 2;
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .optionCard__image{
+            display: inline-block;
+            width: 80px;
+            height: 80%;
+            position: absolute;
+            right: 10px;
+            border-radius: 7px;
+            background-position: center;
+            background-size: cover;
+            background-image: url(../images/thumbOptionCard-1.jpg);
+        }
+
+        .optionCard__seeMore{
+            display: inline-block;
+            width: auto;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            margin: auto;
+            padding: 3px 10px;
+            background-color: #fff;
+
+            transform: translate(-50%, 50%);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.09), 0 3px 6px rgba(0, 0, 0, 0.09);
+            font-size: $font-p - 2;
+            text-align: center;
+            border-radius: 100px;
+            text-decoration: none;
+            z-index: 10;
+            transition-duration: .2s;
+
+            .icon{
+                display: inline-block;
+                font-size: $font-p - 2;
+                margin-right: 5px;
+                position: relative;
+                top: 1px;
+                transition-duration: .2s;
+            }
+
+            .icon--isToggle{
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    //--- cards con opcion afuera de la tarjeta
+
+    &--optionCardOut{
+        float: right;
+        width: calc(96% - 11px);
+        position: initial;
+        padding: 15px;
+        border-radius: 5px;
+        z-index: 1;
+        position: relative;
+
+        .radio__indicator{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: -29px;
+        }
+        
+    }
+}
+
+
+//Extrainfo - Card Down - !important
+.optionCard__extraInfo{
+    display: inline-block;
+    width: 93%;
+    max-width: 550px;
+    background-color: $blanco-f8;
+    z-index: 9;
+    margin-top: -5px;
+    padding: 15px;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 1px 3px 6px $gris-ed;
+
+    &.optionCard__extraInfo--semiRounded{
+        border-radius: 5px;
+    }
+
+    &.optionCard__extraInfo--toggle{
+        padding-top: 20px;
+        transform: translateY(-15px);
+    }
+
+    .item{
+        @include prefix((
+            display: flex,
+            align-items: flex-start,
+            justify-content: flex-start
+        ), webkit moz ms);
+        margin-bottom: 10px;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+        span.icon{
+            display: inline-block;
+            width: 100%;
+            max-width: 9px;
+            margin-right: 10px;
+            padding-top: 3px;
+            font-size: $font-p - 7;
+        }
+        span, strong{
+            display: inline-block;
+            vertical-align: top;
+            font-size: $font-p - 2;
+            color: #575757;
+            width: 100%;
+            text-align: justify;
+            text-align-last: left;
+            strong{
+                font-weight: bold;
+            }
+        }
+        strong{
+            font-weight: bold;
+            font-size: $font-p;
+            display: inline-block;
+            width: auto;
+        }
+        &.item--typeColumn{
+            display: inline-block;
+            width: 100%;
+            font-size: 0;
+            span, strong{
+                display: inline-block;
+                width: 50%;
+                vertical-align: top;
+                font-size: $font-p - 2;
+            }
+            strong{
+                text-align: right;
+                text-align-last: right;
+            }
+        }
+    }
+}
+
+
+

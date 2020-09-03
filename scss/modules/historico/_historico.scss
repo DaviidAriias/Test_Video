@@ -1,0 +1,107 @@
+.rentabilidad{
+    &--cardRed{
+        margin-top: -17px;
+    }
+    
+    &--minMrgn{
+        margin-top: -3px;
+        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+    }
+
+    .box{
+        height: 60px;
+        @include prefix((
+            display: flex,
+            align-items: center,
+            justify-content: space-between,
+            ), webkit moz ms);
+        background-color: $blanco-f8;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        padding: 11px 15px;
+        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+
+        @media only screen and (max-width: 329px) {
+            height: 82px;
+        }
+
+        &.box--oscuro{
+            background-color: #CECECE;
+
+            .box__cards{
+                @include prefix((
+                display: flex,
+                align-items: center,
+                justify-content: space-between,
+                ), webkit moz ms);
+
+                .cantidad{
+                    font-size: $font-p;
+                    font-weight: 600;
+                    color: $negro-57;
+                }
+    
+                .cifras{
+                    font-size: $font-p;
+                    font-weight: 600;
+                    color: $negro-57;
+                    margin-right: 17px;
+
+                    &:first-child{
+                        padding-right: 0;
+                    }
+                    
+                    &:last-child{
+                        margin-right: 17px;
+                    }
+                }
+    
+            }
+        }
+
+        .box__cards{
+            @include prefix((
+            display: flex,
+            align-items: center,
+            justify-content: space-between,
+            ), webkit moz ms);
+
+            .cantidad{
+                @media only screen and (max-width:329px) {
+                    width: 68%;
+                }
+            }
+
+            .cantidad{
+                font-weight: 400;
+                font-size: $font-p;
+                color: $negro-57;
+                text-align: left;
+            }
+
+            .cifras{
+                font-weight: 600;
+                color: $negro-57;
+                margin-right: 17px;
+                font-size: $font-p;
+
+                &:first-child{
+                    padding-right: 13px;
+                }
+                    
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+
+    }
+}
+
+///// nueva 
+
+.contentBoxWhite__imagen{
+    img{
+        width: 89px;
+    }
+}

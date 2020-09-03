@@ -1,0 +1,30 @@
+//Botón atención en línea
+.support{
+    @include prefix((
+        display: flex,
+        flex-direction: column,
+        align-items: center,
+        align-content: center,
+        justify-content: center
+    ), webkit moz ms);
+    width: 100%;
+    height: 90px;
+    background-color: $gris-cd;
+    text-align: center;
+    box-shadow: -20px 2px 16px $gris-a7;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    span{
+        display: inline-block;
+        padding: 5px 0;
+        font-size: $font-p;
+        color: $negro-57;
+        &:first-of-type{
+            font-size: $font-p + 20;
+        }
+    }
+}

@@ -1,0 +1,71 @@
+.cardModerado--fantasma{
+
+    .cardModerado__imagen{
+        background-image: url(../images/FICS-PERFILDECLIENTEDESACTUALIZADO.jpg);
+        background-position: 62% 50%;
+    }
+
+}
+
+.colapsable{
+    margin-bottom: 20px;
+
+    .botonmore{
+        @include prefix((
+            display: flex,
+            align-items: center,
+            justify-content: space-between,
+            ), webkit moz ms);
+    
+        background-color: $blanco-ff;
+        border-radius: 15px;
+        margin: 0 auto;
+        padding: 3px 12px;
+        margin-top: -9.5px;
+        -webkit-box-shadow: 0px 0px 1px 3px rgba(0,0,0,0.25);
+        -moz-box-shadow: 0px 0px 1px 3px rgba(0,0,0,0.25);
+        box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.25);
+        .parrafo{
+            margin-left: 4px;
+        }
+    
+        img{
+            transform: rotateZ(180deg);
+            transition: transform .3s;
+        }
+
+        &.expandido {
+            img {
+                transform: rotateZ(0deg);
+            }
+        }
+    }
+    
+    .contenidOpcional{
+        background-color: #F5F4F4;
+        -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+        -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+        box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+        border-radius: 5px;
+        width: 95%;
+        margin: 0 auto;
+        position: relative;
+        margin-top: -20px;
+        z-index: -1;
+        height: auto;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height .3s ease;
+    
+        &__title{
+            padding: 16px 15px 0;
+        }
+        &__body{
+            padding: 0 15px 16px;
+        }
+
+        &.expandido {
+            max-height: 1000px;
+        }
+    }
+}

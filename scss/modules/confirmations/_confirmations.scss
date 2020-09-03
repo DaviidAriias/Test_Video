@@ -1,0 +1,54 @@
+//Confirmaciones y resultados
+.result__Confir {
+    display: inline-block;
+    width: 100%;
+    .result__Confir__item {
+        display: inline-block;
+        width: 100%;
+        text-align: left;
+        position: relative;
+        color: $negro-57;
+        background-color: $gris-ed;
+        margin: 2.5px 0;
+        padding: 13px 15px;
+        border-radius: 5px;
+        &:hover{
+            background-color: darken($gris-ed, 5%);
+        }
+
+        span, strong {
+            display: inline-block;
+            width: 100%;
+            color: $negro-57;
+            font-size: $font-p;
+        }
+
+        strong{
+            font-weight: bold;
+        }
+
+        &.result__Confir__item--padTooltip{
+            padding-right: 40px;
+        }
+        &.result__Confir__item--small{
+            span, strong{
+                display: inline;
+                font-size: $font-p - 2;
+                text-align: justify;
+            }
+            a{
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
+
+        &--heigth{
+            min-height: 152px;
+        }
+    }
+    //Container oculto
+    .result__Confir__item--hidden{
+        display: none;
+    }
+    
+}

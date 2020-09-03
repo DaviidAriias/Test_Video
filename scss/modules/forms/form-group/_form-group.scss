@@ -1,0 +1,178 @@
+//Inputs
+select, textarea, input[type="text"], input[type="tel"], input[type="email"], input[type="number"], input[type="date"], input[type="time"], input[type="password"] {
+    display: inline-block;
+    width: 100%;
+    height: 35px;
+    padding: 8px 25px 8px 8px;
+    border-radius: 6px;
+    background-color: #fff;
+
+    @include prefix((
+        border: 1.4px solid lighten($gris-cc, 5%)
+    ), webkit moz ms);
+
+    font-size: $font-p;
+    color: $negro-57;
+    font-family: $roboto;
+    font-weight: 400;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    transition-duration: .2s;
+    &:hover{
+        border: 1.4px solid darken($gris-cc, 25%);
+    }
+    &:disabled {
+        background-color: #fff;
+        color: $negro-57;
+        
+        cursor: not-allowed;
+    }
+    &::placeholder{
+        opacity: 50%;
+    }
+    &.input--alert{
+        border-color: $rojo;
+    }
+
+    &.editable{
+        background-image: none;
+    }
+
+}
+input[type="number"] .ligero{
+    font-weight: 100;
+    opacity: 60%;
+}
+//Botones number
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+select{
+    background: URL('../images/icon-dv-arrowDown.svg') no-repeat 96% 50% #fff;
+    background-size: 14px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input[type=date]{
+    background: URL('../images/icon-dv-calendar.svg') no-repeat 96% 50% #fff;
+    background-size: 14px;
+    text-transform: uppercase;
+    &::-webkit-inner-spin-button{
+        display: none; 
+        -webkit-appearance: none;
+    }
+    
+    &::-webkit-calendar-picker-indicator {
+        display: block;
+        background: transparent;
+        bottom: 0;
+        color: transparent;
+        cursor: pointer;
+        height: auto;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: auto;
+    }
+    
+}
+
+input[type="password"]{
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: $font-h;
+    padding-right: 0 !important;
+}
+
+//Input fluid
+.input--fluid{
+    @include prefix((
+        display: flex,
+        flex-direction: row,
+        justify-content: space-between,
+        align-items: center,
+    ), webkit ms moz);
+    input{
+        width: 28%;
+        text-align: center;
+        padding: 6px;
+    }
+}
+
+.input--fluidBigger{
+    @include prefix((
+        display: flex,
+        flex-direction: row,
+        justify-content: space-between,
+        align-items: center,
+    ), webkit ms moz);
+    select{
+        width: 30%;
+        background-position: 93% 50%;
+    }
+    input{
+        width: 20%;
+        text-align: center;
+        padding: 6px;
+    }
+}
+
+//Botones de acción - Editar
+.input__buttonAction{
+    display: inline-block;
+    width: auto;
+    height: auto;
+
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    transform: translateY(-50%);
+    span{
+        font-size: $font-p + 3 !important;
+    }
+    img{
+        display: inline-block;
+        width: 20px;
+    }
+    &.input__buttonAction--moreMargin{
+        right: 15px;
+    }
+}
+
+//Balance account
+.outputBalance{
+    display: inline-block;
+    width: calc(100% - 30px);
+    height: 38px;
+    background-color: $gris-ed;
+    border-radius: 0 0 10px 10px;
+    padding: 10px 15px;
+
+    font-size: 0;
+    box-sizing: border-box;
+    span{
+        display: inline-block;
+        width: 50%;
+        vertical-align: middle;
+
+        font-size: $font-p;
+        text-align: left;
+        color: $negro-57;
+    }
+    strong{
+        display: inline-block;
+        width: 50%;
+        vertical-align: middle;
+        
+        font-weight: bold;
+        font-size: $font-p;
+        text-align: right;
+        color: $negro-57;
+    }
+}

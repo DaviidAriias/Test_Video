@@ -1,0 +1,20 @@
+.disponible{
+    background-color: $gris-ed;
+    border-radius: 0 0 5px 5px;
+    padding: 10px;
+    margin-top: -18px;
+    width: 85%;
+    margin: -18px auto 15px;
+
+    &__flex{
+        @include prefix((
+            display: flex,
+            justify-content: space-between,
+            align-items: center,
+        ), webkit ms moz);
+
+        h4{
+            text-align: right;
+        }
+    }
+}

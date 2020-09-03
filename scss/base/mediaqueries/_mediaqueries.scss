@@ -1,0 +1,274 @@
+//----------- Mobile
+@media (min-width: 45em) {
+
+}
+
+//----------- Phablet
+@media (min-width: 50em) {
+    body{
+        background-color: #fff;
+    }
+    
+    .titlesHeader--Desktop{
+        display: block;
+    }
+
+    .buttonsList__container{
+        .buttonList{
+            background-color: $gris-ed;
+        }
+    }
+
+    .backButton{
+        display: none;
+    }
+
+    .button{
+        font-size: $font-p + 4;
+        width: 25%;
+        &.button--back{
+            display: inline-block;
+        }
+    }  
+
+    .cardsItemBank__container{
+        .itemBank{
+            background-color: $gris-ed;
+        }
+    }
+
+    .contentBox{
+        padding: 15px;
+        background-color: transparent;
+        @include prefix((
+            box-shadow: none
+        ), webkit moz ms);
+        &.contentBox--desktop{
+            padding: 15px;
+            background-color: $blanco-f8;
+            @include prefix((
+                box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.15)
+            ), webkit moz ms);
+        }
+        &.contentBox--boxConfirm{
+            padding-top: 40px;
+        }
+
+        &--minWidth{
+            max-width: 550px;
+            margin-top: 0;
+            padding: 0;
+        }
+    }
+
+    form{
+        .input{
+            .radio{
+                //margin-left: 10%;
+                &:first-child{
+                    margin-left: 0;
+                }
+
+                &.radio--optionCard{
+                    padding: 15px 135px 15px 15px;
+                    .optionCard__image{
+                        width: 110px;
+                    }
+                    .optionCard__info{
+                        span{
+                            font-size: $font-p;
+                        }
+                    }
+                    
+                    &.radio--optionCardOut{
+                        padding: 0;
+                    }
+                }
+
+                &--optionCardOut{
+                    padding: 0;
+                }
+                
+            }
+            .optionCard{
+
+                &__extraInfo{
+                    .item{
+                        span, strong{
+                            font-size: $font-p;
+                        }
+                        span.icon{
+                            font-size: $font-p - 7 !important;
+                        }
+                    }
+                }
+
+                
+            }
+
+            input[type=date]{
+                background-position: 98% 50%;
+            }
+        }
+    }
+
+    //Ajustes vistos haciendo vinculación
+    select, textarea, input[type="text"], input[type="tel"], input[type="email"], input[type="number"], input[type="date"], input[type="time"], input[type="password"] {
+        padding-right: 40px;
+    }
+
+    select{
+        background-position: 98% 50%;
+    }
+
+    .input--fluid, .input--fluidBigger{
+        input{
+            padding: 6px;
+        }
+    }
+}
+
+//----------- Tablet
+@media (min-width: 64em) {
+
+}
+
+//----------- laptop
+@media (min-width: 70em) {
+    body{
+        //background-color: yellowgreen;
+    }
+}
+
+//----------- PC
+@media (min-width: 91em) {
+    body{
+        //background-color: royalblue;
+    }
+}
+
+
+// ------------------------------------------------------------------ Mediaqueries iPhones
+
+/* ----------- iPhone 4 and 4S ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
+
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2){
+    
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2){
+
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3){
+    
+}
+
+/* ----------- iPhone X ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3){
+    
+}
+
+// ------------------------------------------------------------------ Mediaqueries Casos Especiales
+@media only screen and (max-width: 799px){
+    form{
+        .input{
+            .radio{
+                &--optionCardOut{
+                    padding: 0;
+                }
+               
+            }
+        }
+    }
+}
+
+
+
+
+@media (max-width: 600px) {
+    .contButtons{
+        .button{
+            font-size: 4vw;
+        }
+    }
+    body{
+        //background-color: royalblue;
+    }
+}
+
+//Mediaquerie ajustando cards
+@media (max-width: 430px) {
+    .container{
+        .container--intBackGray{
+            padding: 10px;
+        }
+    }
+
+    form{
+        .input{
+            .radio{
+                &--optionCard{
+                    padding: 10px 70px 10px 10px;
+
+                    .optionCard__image{
+                        width: 50px;
+                    }
+                    .optionCard__info{
+                        span{
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+
+                &--optionCardOut{
+                    padding: 0;
+                }
+               
+            }
+        }
+    }
+
+    .kangarooLite{
+        strong, span{
+            font-size: 3vw;
+        }
+        strong{
+            font-size: 5.5vw;
+        }
+    }
+}
+
+//------- 350px
+
+@media only screen and (max-width: 350px){
+
+    .contCanguroMain{
+        .containerCanguro{
+            width: 97%;
+        }
+    }
+
+}
+
+//------- 0 a 320
+
+@media only screen and (max-width: 320px){
+
+    .acordion .acordion__contenido span.medio{
+        flex-basis: 37.5%;
+        margin-right: 13%;
+
+    }
+}

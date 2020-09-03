@@ -1,0 +1,32 @@
+.label, .link{
+    display: inline-block;
+    width: 100%;
+    font-size: $font-p;
+    color: $negro-57;
+    margin: 15px 0;
+    position: relative;
+    text-align: justify;
+    //Solo para el enlace
+    &--underline{
+        text-decoration: underline;
+        text-align: center;
+        &:focus, &:hover{
+            text-decoration: underline;
+        }
+    }
+    &--noMrgn{
+        margin: 0 0 !important;
+    }
+    &--noMrgnTop{
+        margin-top: 0;
+    }
+    &--noMrgnBottom{
+        margin-bottom: 0 !important;
+    }
+    &--center{
+        text-align: center;
+    }
+    &--maxWidth{
+        max-width: 550px;
+    }
+}

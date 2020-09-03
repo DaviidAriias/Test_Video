@@ -1,0 +1,52 @@
+.cardsItemBank__container{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    .itemBank{
+        display: inline-block;
+        width: 100%;
+        max-width: 450px;
+        padding: 15px 10px;
+        background-color: #fff;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        font-size: 0;
+        box-sizing: border-box;
+        position: relative;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+
+        .column{
+            display: inline-block;
+            vertical-align: top;
+            width: 45%;
+            text-align: left;
+            strong, span{
+                display: inline-block;
+                width: 100%;
+                color: $negro-57;
+                font-family: $roboto;
+                font-size: $font-p;
+                img{
+                    display: inline-block;
+                    width: auto;
+                    height: 12px;
+                    transform: translateY(3px);
+                }
+            }
+            strong{
+                font-weight: bold;
+            }
+        }
+
+        .arrow{
+            display: inline-block;
+            width: 8px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+}

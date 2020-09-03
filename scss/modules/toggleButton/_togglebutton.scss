@@ -1,0 +1,50 @@
+.toggleButton{
+    @include prefix((
+        display: flex,
+        align-items: center,
+        justify-content: space-between
+    ), webkit moz ms);
+    width: 100%;
+    position: relative;
+    margin: 2.5px 0;
+    background-color: $gris-ed;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition-duration: .2s;
+    text-align: left;
+    color: $negro-57;
+    font-size: $font-p;
+    color: $negro-57;
+    transition-duration: .2s;
+    &:hover{
+        background-color: darken($gris-ed, 5%);
+    }
+    strong{
+        font-weight: bold;
+    }
+    &--darken{
+        .icon{
+            &::before{
+                color: $gris-93;
+            }
+        }
+    }
+    &--vinculation{
+        margin: 0 0;
+        background-color: $gris-e8;
+        @include prefix((
+            box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.20)
+        ), webkit moz ms);
+        .result__ConfirButton--icon{
+            &::before{
+                color: $negro-57;
+            }
+        }
+    }
+    .result__ConfirButton--icon{
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        font-size: $font-p + 2;
+    }
+}

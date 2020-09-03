@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Davivienda S.A.</title>
+</head>
+
+<body>
+    <section class="container">
+        <!-- Title main desktop -->
+        <div class="titlesHeader--Desktop">
+            <h1>Cuenta Móvil Pensión</h1>
+            <h3>Apertura</h3>
+        </div>
+        <!-- End title main desktop -->
+
+        <!-- Botón "atrás" Mobile -->
+        <a href="javascript:void(0)" class="backButton">
+            <span class="icon-dv-btnBack"></span>
+            Atrás
+        </a>
+        <!-- Fin Botón "atrás" Mobile -->
+
+        <div class="contentBox contentBox--mw700">
+            <h2 class="main medium noMrgn">Para continuar con la apertura de su cuenta adquiera su Tarjeta Débito Mastercard</h2>
+
+            <div class="gifArea">
+                <video id="video" muted playsinline>
+                    <source src="../images/Pensionados-Vids/Vids_Mastercard.mp4" type="video/mp4">
+                    <source src="../images/Pensionados-Vids/Vids_Mastercard.webm" type="video/webm">
+                    Su navegador no admite este archivo.
+                </video>
+            </div>
+            <p class="label label--noMrgnBottom">Adquiriendo esta tarjeta usted puede <strong>hacer uso de su cuenta</strong>, realizar <strong> compras en establecimientos físicos</strong>, <strong>por internet</strong> y <strong>retiros en cajeros</strong>.</p>
+           <form class="mrgnTop">
+                <!-- Formulario -->
+                <div class="input input--noMrgnBottom" id="noMrgnBottom">
+                    <label for="">Esta Tarjeta Débito será enviada sin costo a la siguiente dirección. Si lo desea, podrá modificarla únicamente para esta entrega.</label>
+                    <input type="text" id="adressDefault" placeholder="Carrera 9 # 116 - 08" disabled="">
+                    <a href="javascript:void(0)" title="Editar" class="input__buttonAction" id="triggerChangeAddress" onclick="chengeAddress()"><span class="icon-dv-edit"></span></a>
+
+                    <div class="input--fluidBigger" id="adressAltern" style="display: none;">
+                        <select name="">
+                            <option value="-1" selected="">Seleccione</option>
+                            <option value="1">Opción 1</option>
+                            <option value="2">Opción 2</option>
+                        </select>
+                        <input type="text">
+                        <span>#</span>
+                        <input type="text">
+                        <span>-</span>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="input" id="adressAltern_B" style="display: none;">
+                    <label for="otros-datos">Torre / Piso / Apartamento / Otro:</label>
+                    <input type="text" id="otros-datos" value="">
+                </div>
+                <div class="input" id="adressAltern_C" style="display: none;">
+                    <label for="ciudad">Ciudad:</label>
+                    <input type="text" id="ciudad" value="">
+                </div>
+           </form>
+        </div>
+
+        <div class="contTextInformation contTextInformation--big">
+            <p><strong>¿Desea adquirir su Tarjeta Débito?</strong></p>
+        </div>
+
+        <!-- Contenedor y Botones genericos - Siempre poner los botones dentro de contButtons -->
+        <div class="contButtons contButtons--noMrgn">
+            <button type="button" class="button button--secondary">Omitir</button>
+            <button type="button" class="button button--primary">Adquirir</button>
+        </div>
+        <!-- Contenedor y Botones genericos -->
+
+    </section>
+    
+    <script src="../js/main.js"></script>
+    <script src="../js/executeVideo.js"></script>
+</body>
+
+</html>

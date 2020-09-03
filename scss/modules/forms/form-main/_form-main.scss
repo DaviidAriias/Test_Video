@@ -1,0 +1,139 @@
+//Formularios
+form {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    transition-duration: .3s;
+    &.mrgnBottom{
+        margin-bottom: 15px;
+    }
+    &.mrgnTop{
+        margin-top: 15px;
+    }
+    
+    //Container Iputs - !Importante!
+    .input{
+        display: inline-block;
+        width: 100%;
+        position: relative;
+        margin-bottom: 15px;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+        //Spans
+        span{
+            display: inline-block;
+            font-size: $font-p;
+            color: $negro-57;
+
+             //span validation input--alert
+             &.validation{
+                width: 100%;
+                text-align: left;
+                font-size: $font-p - 2;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+        }
+        
+        &--otp{
+            input{
+                text-align: center;
+                letter-spacing: 5px;
+                font-weight: bold;
+                color: $negro-57;
+                font-size: $font-p + 4;
+            }
+        }
+
+        &--mrgnTop{
+            margin-top: 15px;
+        }
+
+        &--mrgnBottom{
+            margin-bottom: 15px;
+        }
+        &--noMrgnBottom{
+            margin-bottom: 0;
+        }
+
+        &--pseHidden{
+            display: none;
+        }
+    }
+    &.maxWidth{
+        max-width: 550px;
+    }
+
+    //Multicheckbox Vinculación
+    .multiChecbox{
+        display: inline-block;
+        font-size: 0;
+        box-sizing: border-box;
+        text-align: left;
+        .checkbox{
+            display: inline-block;
+            margin-top: 10px;
+            box-sizing: border-box;
+            width: calc(90%/5);
+            min-width: 105px;
+            padding-top: 4px;
+            margin-right: 4%;
+            &:last-of-type{
+                width: auto;
+            }
+            &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3){
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+//Labels Inputs - Dejar por fuera para evitar complicaciones con otros labels como Radiobuttons o Checkbox
+label, .label{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+    position: relative;
+    font-family: $roboto;
+    font-size: $font-p;
+    color: $negro-57;
+    text-align:left;
+
+    strong{
+        font-weight: bold;
+    }
+
+    &.lineUno{
+        line-height: 1;
+    }
+}
+
+//Gray boxes - inputs
+.boxForm--Group{
+    display: inline-block;
+    width: 100%;
+    background-color: $gris-ed;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 10px;
+    .boxForm__head{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 5px 2% 5px 5px;
+        text-align: center;
+        margin-bottom: 5px;
+        strong{
+            font-weight: bold;
+            color: $negro-57;
+            font-size: $font-p;
+        }
+        img{
+            display: inline-block;
+            width: 11px;
+            opacity: .5;
+        }
+    }
+}

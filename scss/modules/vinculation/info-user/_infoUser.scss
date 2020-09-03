@@ -1,0 +1,66 @@
+.infoUserPreloaded{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    img{
+        display: block;
+        width: 100%;
+        max-width: 120px;
+        margin: 0 auto;
+    }
+    h2{
+        text-align: center;
+        font-size: $font-p + 6;
+    }
+
+    .firstInfo, .secondInfo{
+        display: inline-block;
+        width: 100%;
+        margin: 0;
+    }
+    //Oculto inicialmente
+    .secondInfo{
+        display: none;
+        margin: 30px 0 0;
+    }
+
+    a{
+        display: inline-block;
+        width: auto;
+        font-size: $font-p + 2;
+        color: $negro-57;
+        text-decoration: underline;
+        font-weight: 100;
+        margin: 0 0 20px;
+    }
+    p{
+        display: inline-block;
+        width: 100%;
+        font-size: $font-p + 2;
+        color: $negro-57;
+    }
+
+    //List info user
+    ul{
+        display: inline-block;
+        width: 100%;
+        text-align: left;
+        li{
+            display: inline-block;
+            width: 100%;
+            text-align: left;
+            color: $negro-57;
+            &.title{
+                font-weight: bold;
+                font-size: $font-p;
+                margin-top: 10px;
+                &:first-of-type{
+                    margin-top: 0;
+                }
+            }
+            &.item{
+                font-size: $font-p + 2;
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+//CSS de las pantallas de los GIFs usados para la lectura de documento y huellas
+.gifVinculation{
+    display: inline-block;
+    width: 100%;
+    max-width: 550px;
+    box-sizing: border-box;
+    font-size: 0;
+    img{
+        display: inline-block;
+        width: 100%;
+        border-radius: 6px;
+    }
+    p.paragraph{
+        display: inline-block;
+        width: 100%;
+        font-size: $font-p;
+        color: $negro-57;
+        margin: 15px 0 0;
+        &--mrgnBottom{
+            margin-bottom: 15px;
+        }
+        &--small{
+            font-size: $font-p - 2;
+        }
+    }
+}

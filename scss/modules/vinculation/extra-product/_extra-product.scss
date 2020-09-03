@@ -1,0 +1,15 @@
+.extraProduct{
+    display: none;
+    font-size: 0;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    .toggleButton--vinculation{
+        margin: 0 0 15px;
+        .icon-dv-trash{
+            font-size: $font-p + 3;
+            &::before{
+                color: $rojo;
+            }
+        }
+    }
+}

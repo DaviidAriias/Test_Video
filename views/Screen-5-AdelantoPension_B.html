@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Davivienda S.A.</title>
+</head>
+
+<body>
+    <section class="container">
+        <!-- Title main desktop -->
+        <div class="titlesHeader--Desktop">
+            <h1>Cuenta Móvil Pensión</h1>
+            <h3>Apertura</h3>
+        </div>
+        <!-- End title main desktop -->
+
+        <!-- Botón "atrás" Mobile -->
+        <a href="javascript:void(0)" class="backButton">
+            <span class="icon-dv-btnBack"></span>
+            Atrás
+        </a>
+        <!-- Fin Botón "atrás" Mobile -->
+        
+        <div class="contentBox contentBox--mw700">
+            <h2 class="main medium noMrgn">¿Desea agregar el beneficio de Adelanto de Pensión a su cuenta?</h2>
+
+            <div class="gifArea">
+                <video id="video" muted playsinline>
+                    <source src="../images/Pensionados-Vids/Vids_AdelantoPension.mp4" type="video/mp4">
+                    <source src="../images/Pensionados-Vids/Vids_AdelantoPension.webm" type="video/webm">
+                    Su navegador no admite este archivo.
+                </video>
+            </div>
+
+            <!-- Contenedor de Beneficios y Caracteristicas -->
+            <h2>Usted tiene aprobado un cupo de Adelanto de Pensión por $1.000.000.</h2>
+            <div class="benefits__container benefits__container--productInterno">
+                <!-- Item Beneficios y Caracteristicas -->
+                <div class="benefits__item">
+                    <img src="../images/icon-AP-bnft-1.svg" alt="Beneficio">
+                    <p>
+                        Anticipe una parte de su próximo pago de pensión cada vez que lo necesite.
+                    </p>
+                </div>
+                <!-- Fin Item Beneficios y Caracteristicas -->
+                <div class="benefits__item">
+                    <img src="../images/icon-AP-bnft-2.svg" alt="Beneficio">
+                    <p>
+                        El valor que anticipe se debitará en una sola cuota automáticamente de la cuenta al recibir su pago de pensión.
+                    </p>
+                </div>
+                <div class="benefits__item">
+                    <img src="../images/icon-AP-bnft-3.svg" alt="Beneficio">
+                    <p>
+                        Comisión por cada uso de $9.600.
+                    </p>
+                </div>
+
+                <div class="benefits__item">
+                    <img src="../images/icon-AP-bnft-4.svg" alt="Beneficio">
+                    <p>
+                        Al recibir su próximo pago, le enviaremos un instructivo a su correo para acceder a su cupo de adelanto de pensión a través del App Davivienda o www.davivienda.com.
+                    </p>
+                </div>
+                <!-- Fin Contenedor de Beneficios y Caracteristicas -->
+            </div>
+            <div class="contTextInformation contTextInformation--fullWidth contTextInformation--noMrgnBottom">
+                <p>Este producto <strong>no genera intereses corrientes</strong>.</p>
+            </div>
+        </div>
+
+        <div class="contTextInformation contTextInformation--big">
+            <p><strong>¿Desea agregar este beneficio?</strong></p>
+        </div>
+
+        <!-- Contenedor y Botones genericos - Siempre poner los botones dentro de contButtons -->
+        <div class="contButtons contButtons--noMrgn">
+            <button type="button" class="button button--secondary">Omitir</button>
+            <button type="button" class="button button--primary" onclick="showKangaroo()">Agregar</button>
+        </div>
+        <!-- Contenedor y Botones genericos -->
+
+    </section>
+
+    <section class="contCanguroMain" id="contCanguro">
+        <div class="containerCanguro">
+    
+            <div class="containerCanguro__header containerCanguro__header--noCloseButton">
+                <div class="header__title">
+                    <img src="../images/icon-dv-seguroProteccionTarjetas.svg" alt="icon">
+                    <h2 class="noMrgn">Seguro Protección Tarjetas</h2>
+                </div>
+                <a href="javascript:void(0)" class="header__closeCanguro" onclick="hideKangaroo()" title="Cerrar"><span class="icon-dv-closeKangaroo"></span></a>
+            </div>
+
+            <div class="containerCanguro__content">
+                <h2 class="noMrgn center">¿Quiere proteger sus tarjetas?</h2>
+                <p class="paragraphCanguro">
+                    Proteja las transacciones que realice con todas sus tarjetas de crédito y débito de Davivienda en caso de:
+                </p>
+                <div class="list">
+                    <div class="list__item">
+                        <span class="icon-dv-listItemA"></span>
+                        <div class="item__text">
+                            Hurto calificado de dinero y mercancías.
+                            <a href="javascript:void(0)" class="buttonTooltip buttonTooltip--textPosition_B"><span class="icon-dv-tooltipInfo"></span></a>
+                            <div class="tooltip">
+                                <p>
+                                    Si ocurre dentro de las 12 horas siguientes al momento de la transacción.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list__item">
+                        <span class="icon-dv-listItemA"></span>
+                        <div class="item__text">
+                            Daño de las mercancías pagadas en su totalidad con las tarjetas de Davivienda.
+                            <a href="javascript:void(0)" class="buttonTooltip buttonTooltip--textPosition_B"><span class="icon-dv-tooltipInfo"></span></a>
+                            <div class="tooltip">
+                                <p>
+                                    Si ocurre dentro de las 5 horas siguientes al momento en que quede registrada la compra.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list__item">
+                        <span class="icon-dv-listItemA"></span>
+                        <p>Muerte accidental.</p>
+                    </div>
+                    <div class="list__item">
+                        <span class="icon-dv-listItemA"></span>
+                        <p>Pago a terceros por perjuicios
+                            patrimoniales.</p>
+                        </div>
+                </div>
+                <a href="javascript:void(0)" class="content__link">Ver Términos y Condiciones</a>
+                <h2 class="noMrgnBottom center regular">¿Por cuánto quiere asegurarse?</h2>
+                <form>
+                    <div class="input radioCenter">
+                        <label class="radio">
+                            <strong>$ 1.600.000</strong> <br> <strong>$5.167</strong> mensual
+                            <input type="radio" value="" name="valorSeguro"> 
+                            <div class="radio__indicator"></div>
+                        </label>
+                        <span class="separator"></span>
+                        <label class="radio">
+                            <strong>$ 3.500.000</strong> <br> <strong>$10.333</strong> mensual
+                            <input type="radio" value="" name="valorSeguro">
+                            <div class="radio__indicator"></div>
+                        </label>
+                    </div>
+                </form>
+
+                <h2 class="noMrgnBottom center">¿Desea adquirir este seguro?</h2>
+
+                <div class="contButtons contButtons--sameWidth">
+                    <button type="button" class="button button--secondary" onclick="hideKangaroo()">Omitir</button>
+                    <button type="button" class="button button--primary">Adquirir</button>
+                </div>
+                
+                <div class="contTextInformation contTextInformation--noMrgnTop contTextInformation--mrgnBottom">
+                    <p class="text-description">Este seguro es expedido por <br> <strong>Seguros Comerciales Bolívar S.A.</strong> </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/executeVideo.js"></script>
+</body>
+
+</html>

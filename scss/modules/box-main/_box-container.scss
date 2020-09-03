@@ -1,0 +1,48 @@
+//Container Box - Shadows - Padding - Background
+.contentBox{
+    display: inline-block;
+    border-radius: 10px;
+    width: 95%;
+    margin: 15px auto 0;
+    position: relative;
+    padding: 15px;
+    background-color: $blanco-f8;
+
+    @include prefix((
+        box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.15)
+    ), webkit moz ms);
+
+    transition-duration: .2s;
+
+    &--boxWidth{
+        width: 90%;
+    }
+
+    &--boxConfirm{
+        padding-top: 40px;
+    }
+    &--noBackg{
+        background-color: transparent;
+        box-shadow: none;
+    }
+    &--noPadding{
+        padding: 0;
+    }
+
+    &--noMrgnMin{
+        margin: 15px auto 0;
+    }
+
+    &--noMrgnTop{
+        margin: 0 auto;
+    }
+
+    &--mw700{
+        max-width: 700px;
+    }
+    .contentBoxWhite{
+        background-color: $blanco-ff;
+        border-radius: 5px;
+        margin: 5px 8px;
+    }
+}

@@ -1,0 +1,124 @@
+.cardModerado{
+    background-color: $blanco-f8;
+    border-radius: 8px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+    @include prefix((
+        display: flex,
+        align-items: center,
+        justify-content: space-between,
+        ), webkit moz ms);
+
+    height: 220px;
+
+    &__imagen{
+        background-image: url(../images/FONDOSRIESGOALTO.jpg);
+        height: 100%;
+        border-radius: 5px 0 0 5px;
+        width: 32%;
+        clip-path: ellipse(82% 56% at 17% 53%);
+        background-position: 80% 50%;
+        background-size: cover;
+
+        @media only screen and (min-width: 475px) {
+            clip-path: ellipse(82% 84% at 16% 50%);
+        }
+    }
+
+    &__contenido{
+        width: 65%;
+        padding: 11px 10px;
+        @media only screen and (min-width: 475px) {
+            width: 67%;
+        }
+
+        .title{
+            font-size: $font-p + 2;
+            font-weight: 500;
+        }
+
+        p{
+            font-size: $font-p - 2;
+            text-align: left;
+            color: $negro-57;
+            line-height: 1.2;
+        }
+
+        .subtitle{
+            font-size: $font-p + 3;
+            font-weight: 600;
+            margin: 5px 0;
+        }
+    }
+}
+
+//---------------------------------------------- asesoria
+.cardModerado--maxH{
+    height: 230px;
+
+    .asesoria{
+        padding: 15px;
+        width: 100%;
+    
+        // ----------------------------------  Opcion cards img 
+        .input{
+            margin-bottom: 10px;
+        }
+        .radio{
+            @include prefix((
+                display: flex,
+                align-items: center,
+                justify-content: space-between,
+                ), webkit moz ms);
+            width: 100%;
+        
+            .radio__indicator{
+                top: 50%;
+                transform: translateY(-50%);
+                left: -4px;
+            }
+        
+            .contenido{
+                background-color: $gris-ee;
+                border-radius: 5px;
+                padding: 4px;
+                height: 59px;
+                @include prefix((
+                    display: flex,
+                    align-items: center,
+                    justify-content: space-between,
+                    ), webkit moz ms);
+                width: 100%;
+                box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.16);
+            
+        
+                &__imagen{
+                    background-image: url('../images/INFORMACIONSUFICIENTE.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: 50% 50%;
+                    width: 17%;
+                    height: 100%;
+                    border-radius: 4px;
+                    margin-right: 10px;
+    
+                    &--B{
+                        background-image: url('../images/QUIEROHABLARASESORESPECIALIZADO.jpg');
+                    }
+    
+                    &--C{
+                        background-image: url('../images/QUIEROPROGRAMARLLAMADAMASINFORMACION.jpg');
+                    }
+                }
+        
+                &__parrafo{
+                    font-size:  $font-p - 2;
+                    color: $negro-57;
+                    margin-right: 9px;
+                    width: 83%;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+}

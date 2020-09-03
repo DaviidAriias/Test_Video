@@ -1,0 +1,347 @@
+//Main variable
+:root {
+    --variableSizeElements: 16px; 
+}
+
+//Size for accesibility elements and fonts size
+.setSizeElements{
+
+    //--------------------Botón Atras
+    .backButton{
+        font-size: var(--variableSizeElements);
+    }
+    
+    //--------------------ContentBox
+    .contentBox{
+        &.contentBox--noBackg{
+            padding: 5px;
+        }
+    }
+
+    //Parrafo
+    .parrafo{
+        font-size: var(--variableSizeElements);
+    }
+
+    //--------------------Container Beneficios
+    .benefits__container{
+        .benefits__item{
+            img{
+                max-width: 30px;
+            }
+            p{
+                font-size: var(--variableSizeElements);
+            }
+        }
+        &--mrgnTopSizeElements{
+            margin-top: 15px;
+        }
+    }
+    
+    //--------------------Container Extra Titles/Information - Helpers
+    .contTextInformation{
+        width: 100%;
+        max-width: 300px;
+        p{
+            font-size: var(--variableSizeElements);
+            strong{
+                font-size: var(--variableSizeElements);
+            }
+        }
+        .buttonTooltip{
+            right: -10px;
+        }
+        .tooltip{
+            right: -20px;
+        }
+        
+        &--sizing{
+            left: -10px;
+        }
+        &--fullWidth{
+            width: 100%;
+            max-width: inherit;
+        }
+    }
+
+    //--------------------Titles
+    h1, h2, h3, h4{
+        font-size: var(--variableSizeElements);
+        letter-spacing: .5px;
+        &.main, &.big22{
+            font-size: $font-h;
+        }
+    }
+
+    //-------------------- Forms Objects
+    form{
+        .input{
+            span{
+                &.validation{
+                    font-size: $font-p !important;
+                }
+            }
+        }
+    }
+    
+    //--------------------Labels
+    label, .label{
+        font-size: var(--variableSizeElements);
+        margin-bottom: 10px;
+    }
+    
+    //--------------------Form-group
+    select, textarea, input[type="text"], input[type="tel"], input[type="email"], input[type="number"], input[type="date"], input[type="time"], input[type="password"] {
+        height: 45px;
+        padding-right: 40px;
+        font-size: var(--variableSizeElements);
+    }
+
+    input[type=date]{
+        background-size: 18px;
+    }
+
+    //--------------------Input direccion
+    .input--fluidBigger{
+        select{
+            padding-right: 23px;
+        }
+        input{
+            padding: 5px;
+        }
+    }
+
+    //--------------------Input telefono
+    .input--fluid{
+        input{
+            padding: 8px;
+        }
+    }
+
+    .input__buttonAction{
+        transform: translateY(-60%);
+        span{
+            font-size: $font-p + 6 !important;
+        }
+    }
+
+    //--------------------Checkbox
+    .checkbox{
+        .checkbox__indicator{
+            width: 25px;
+            height: 25px;
+            &::after{
+                width: 17px;
+                height: 17px;
+                border-radius: 3px;
+            }
+        }
+    }
+
+    //--------------------Value showed
+    .valueShowed{
+        span{
+            &.title{
+                font-size: $font-p;
+            }
+        }
+    }
+
+    //--------------------Range Slider Accesibilidad
+    .input--rangeSlider{
+        .rangeSlider__quantityTitles{
+            span{
+                font-size: var(--variableSizeElements);
+            }
+        }
+    }
+
+    //-------------------- Output cuenta
+    .outputBalance{
+        width: 98%;
+        padding: 10px;
+        span, strong{
+            font-size: $font-p + 2;
+        }
+    }
+
+    //--------------------Tooltips
+    .buttonTooltip{
+        width: 18px;
+        height: 18px;
+        span{
+            font-size: $font-p + 4 !important;
+        }
+    }
+
+    .tooltip{
+        width: 100%;
+        p{
+            font-size: var(--variableSizeElements);
+        }
+    }
+
+    //--------------------Buttons
+    .contButtons{
+        .button{
+            min-width: 140px;
+            font-size: var(--variableSizeElements);
+            letter-spacing: .5px;
+            padding: 10px 15px;
+        }
+    }
+
+    
+    //--------------------Vinculation
+    .label--underline, .link--underline{
+        font-size: $font-p + 2;
+    }
+
+    
+    //--------------------Vinculation
+    .gifVinculation{
+        p{
+            &.paragraph{
+                font-size: var(--variableSizeElements);
+            }
+        }
+    }
+    
+    .infoUserPreloaded{
+        a, p{
+            font-size: var(--variableSizeElements);
+        }
+        ul{
+            li{
+                &.title, &.item{
+                    font-size: var(--variableSizeElements);
+                }
+            }
+        }
+    }
+    
+    .buttonTransfer{
+        max-width: 250px;
+        span{
+            font-size: var(--variableSizeElements);
+        }
+    }
+    
+    //--------------------Canguros
+    .contCanguroMain{
+        .containerCanguro{
+            width: 97%;
+            padding: 10px 10px 0;
+            .containerCanguro__header--noCloseButton{
+                .header__title{
+                    h2{
+                        font-size: var(--variableSizeElements);
+                    }
+                }
+            }
+            .paragraphCanguro{
+                font-size: var(--variableSizeElements);
+            }
+            .list{
+                .list__item{
+                    .item__text{
+                        font-size: var(--variableSizeElements);
+                        .buttonTooltip--textPosition_B{
+                            top: -2px;
+                        }
+                    }
+                    p{
+                        font-size: var(--variableSizeElements);
+                    }
+                    .tooltip{
+                        p{
+                            font-size: var(--variableSizeElements) !important;
+                        }
+                    }
+                }
+            }
+            .contButtons{
+                &.contButtons.contButtons--sameWidth{
+                    .button{
+                        min-width: 110px;
+                    }
+                }
+            }
+            .contTextInformation{
+                p.text-description{
+                    font-size: $font-p + 2;
+                    strong{
+                        font-size: $font-p + 2;
+                    }
+                }
+            }
+            .content__link{
+                font-size: var(--variableSizeElements);
+            }
+        }
+        .containerCanguro__content{
+            .radioCenter{
+                .radio{
+                    font-size: $font-p !important;
+                }
+            }
+        }
+    }
+
+    //--------------------Modales
+    .contModal{
+        .modal{
+            padding: 20px 10px;
+            .modal__body{
+                p, span, strong{
+                    font-size: var(--variableSizeElements);
+                }
+            }
+            .contButtons{
+                .button{
+                    width: 45%;
+                    margin: 15px 2.5px 0;
+                }
+            }
+        }
+    }
+
+    //--------------------Textos T&C
+    .container--textTYC{
+        p{
+            font-size: var(--variableSizeElements);
+        }
+    }
+    
+    //--------------------Resultados - Confirmacion
+    .result__alert{
+        p{
+            strong.big{
+                font-size: $font-h - 2;
+            }
+            font-size: var(--variableSizeElements);
+        }
+    }
+    .result__Confir{
+        .result__Confir__item{
+            span, strong{
+                font-size: var(--variableSizeElements);
+            }
+            &.result__Confir__item--small{
+                span, strong, a{
+                    font-size: $font-p + 2;
+                }
+            }
+        }
+    }
+    
+    //--------------------Toggle button
+    .toggleButton{
+        font-size: var(--variableSizeElements);
+        .result__ConfirButton--icon{
+            width: $font-h;
+            height: $font-h;
+            font-size: $font-h;
+        }
+    }
+}

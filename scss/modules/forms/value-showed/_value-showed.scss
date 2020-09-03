@@ -1,0 +1,21 @@
+.valueShowed{
+    display: inline-block;
+    width: 60%;
+    max-width: 200px;
+    background-color: $gris-dd;
+    padding: 5px 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    span{
+        display: inline-block;
+        width: 100%;
+        color: $negro-57;
+        &.title{
+            font-size: $font-p - 2;
+        }
+        &.item{
+            font-size: $font-p + 3;
+            font-weight: bold;
+        }
+    }
+}
